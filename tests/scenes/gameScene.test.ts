@@ -160,13 +160,13 @@ describe('GameScene Logic', () => {
 
   describe('Score Calculation', () => {
     it('classic mode gives 10 points per food', () => {
-      const gameMode = 'classic';
+      const gameMode: string = 'classic';
       const points = gameMode === 'timeattack' ? 20 : 10;
       expect(points).toBe(10);
     });
 
     it('time attack mode gives 20 points per food', () => {
-      const gameMode = 'timeattack';
+      const gameMode: string = 'timeattack';
       const points = gameMode === 'timeattack' ? 20 : 10;
       expect(points).toBe(20);
     });

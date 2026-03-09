@@ -14,8 +14,8 @@ test.describe('Snake Game E2E', () => {
     const canvas = page.locator('canvas');
     await expect(canvas).toBeVisible();
     
-    const width = await canvas.evaluate((el) => el.width);
-    const height = await canvas.evaluate((el) => el.height);
+    const width = await canvas.evaluate((el) => (el as HTMLCanvasElement).width);
+    const height = await canvas.evaluate((el) => (el as HTMLCanvasElement).height);
     
     expect(width).toBe(600);
     expect(height).toBe(680);
