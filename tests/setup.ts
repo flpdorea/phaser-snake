@@ -1,5 +1,3 @@
-import { beforeAll, afterAll, afterEach } from 'vitest';
-
 const localStorageMock = (() => {
   let store: Record<string, string> = {};
   return {
@@ -12,7 +10,7 @@ const localStorageMock = (() => {
   };
 })();
 
-Object.defineProperty(global, 'localStorage', {
+Object.defineProperty(globalThis, 'localStorage', {
   value: localStorageMock,
   writable: true,
 });
